@@ -1,0 +1,19 @@
+# Ignore sensitive files
+/config/master.key
+
+
+# Ignore database files
+/storage/*.sqlite3
+/storage/*.sqlite3-journal
+/storage/*.sqlite3-shm
+/storage/*.sqlite3-wal
+
+# Ignore logs and temp files
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
