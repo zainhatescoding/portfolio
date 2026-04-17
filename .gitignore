@@ -1,6 +1,6 @@
 # Ignore sensitive files
 /config/master.key
-
+/config/credentials.yml.enc
 
 # Ignore database files
 /storage/*.sqlite3
