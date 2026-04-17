@@ -1,0 +1,612 @@
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<main class="container">
+  <!-- Floating 'Get in touch' button -->
+  <a href="mailto:hello@example.com" class="floating-contact">
+    Get in touch <span class="btn-arrow">&rarr;</span>
+  </a>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <div class="nav-logo">
+      <!-- Main Logo -->
+      <svg class="nav-brand-logo" style="width: 40px; height: 40px;" viewBox="0 0 940 960" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.082581 5.09255C1.86025 3.31489 27.9111 1.40794 58.2607 0.826155C88.4811 0.244373 238.29 -0.143481 669.131 0.0504462L693.372 8.9711C706.721 13.8516 725.564 22.5783 735.325 28.3638C745.054 34.117 763.574 49.3726 776.535 62.2688C795.022 80.6918 803.167 92.0689 814.641 115.599C822.689 132.05 831.578 156.388 834.357 169.737C837.913 186.641 838.979 203.739 837.848 226.299C836.62 251.219 834.066 264.567 826.762 284.477C821.526 298.698 813.542 316.152 809.018 323.262C804.493 330.373 796.638 341.33 791.532 347.6C786.425 353.871 751.001 389.456 712.765 426.658C674.561 463.86 617.094 519.743 585.096 550.836C553.098 581.929 503.227 630.702 474.267 659.241C445.307 687.781 421.68 712.571 421.745 714.349C421.81 716.482 469.386 716.676 704.685 712.248L824.273 831.998C921.754 929.641 943.086 952.524 939.66 955.885C936.298 959.15 867.842 959.99 271.581 959.99L247.34 951.069C234.023 946.189 215.148 937.462 205.387 931.677C195.658 925.924 177.138 910.668 164.177 897.772C145.69 879.349 137.545 867.972 126.071 844.442C118.023 827.99 109.134 803.62 106.355 790.304C102.735 773.044 101.765 756.722 103.026 733.742C103.995 715.965 106.84 694.892 109.361 686.876C111.882 678.86 118.087 663.605 123.162 652.939C128.236 642.273 140.809 623.009 151.087 610.113C161.365 597.217 171.773 585.581 174.262 584.256C176.718 582.931 228.723 533.156 289.81 473.653C350.897 414.117 427.207 339.94 459.399 308.815C491.591 277.657 518.127 250.346 518.385 248.116C518.741 244.916 489.555 244.463 236.027 247.922L116.439 128.107C37.155 48.6615 -2.05062 7.19343 0.082581 5.09255Z" fill="#FEFEFE"/></svg>
+    </div>
+    
+    <div class="nav-columns">
+      <div class="nav-col">
+        <span class="nav-title">▶  Quick Links</span>
+        <a href="#work" class="nav-link">My Work</a>
+        <a href="#insights" class="nav-link">Experience</a>
+      </div>
+      <div class="nav-col">
+        <span class="nav-title">▶  Narrative</span>
+        <a href="#about" class="nav-link">About Me</a>
+        <a href="#connect" class="nav-link">Connect</a>
+      </div>
+      <div class="nav-col">
+        <span class="nav-title">▶  POC</span>
+        <a href="#brands" class="nav-link">Testimonials</a>
+        <a href="#agencies" class="nav-link">Case Studies</a>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-time">
+        <span class="time-box" id="current-time">00:00:00</span>
+        <span class="time-label">CET<br>ENS</span>
+      </div>
+      <a href="/discover" class="nav-link discover-link">Discover</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero-bottom-centered">
+    <div class="hero-video-wrapper">
+      <!-- Make sure to place your video at app/assets/videos/background.mp4 or public/background.mp4 -->
+      <!-- The poster attribute will hold the first frame, and it plays automatically -->
+      <video id="hero-bg-video" src="/background.mp4" autoplay loop muted playsinline poster="/poster.jpg"></video>
+      <div class="hero-fade-overlay"></div>
+    </div>
+
+    <div class="hero-content-wrapper">
+      <h1 class="hero-headline reveal-text">
+        Muhammad Zain.
+      </h1>
+      <h2 class="hero-sub reveal-text" style="transition-delay: 0.1s;">few years of design,<br>experienced by me.</h2>
+      <div class="hero-sub-bottom reveal-text" style="transition-delay: 0.2s;">
+        2026 to the Future
+      </div>
+    </div>
+  </section>
+
+  <!-- Selected Works -->
+  <section id="work" class="works reveal-up">
+    <h2 class="works-header reveal-text" style="font-size: 2rem; margin-bottom: 3rem;">
+        <svg class="hero-star" style="width: 1.5rem; height: 1.5rem;" viewBox="0 0 940 960" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.082581 5.09255C1.86025 3.31489 27.9111 1.40794 58.2607 0.826155C88.4811 0.244373 238.29 -0.143481 669.131 0.0504462L693.372 8.9711C706.721 13.8516 725.564 22.5783 735.325 28.3638C745.054 34.117 763.574 49.3726 776.535 62.2688C795.022 80.6918 803.167 92.0689 814.641 115.599C822.689 132.05 831.578 156.388 834.357 169.737C837.913 186.641 838.979 203.739 837.848 226.299C836.62 251.219 834.066 264.567 826.762 284.477C821.526 298.698 813.542 316.152 809.018 323.262C804.493 330.373 796.638 341.33 791.532 347.6C786.425 353.871 751.001 389.456 712.765 426.658C674.561 463.86 617.094 519.743 585.096 550.836C553.098 581.929 503.227 630.702 474.267 659.241C445.307 687.781 421.68 712.571 421.745 714.349C421.81 716.482 469.386 716.676 704.685 712.248L824.273 831.998C921.754 929.641 943.086 952.524 939.66 955.885C936.298 959.15 867.842 959.99 271.581 959.99L247.34 951.069C234.023 946.189 215.148 937.462 205.387 931.677C195.658 925.924 177.138 910.668 164.177 897.772C145.69 879.349 137.545 867.972 126.071 844.442C118.023 827.99 109.134 803.62 106.355 790.304C102.735 773.044 101.765 756.722 103.026 733.742C103.995 715.965 106.84 694.892 109.361 686.876C111.882 678.86 118.087 663.605 123.162 652.939C128.236 642.273 140.809 623.009 151.087 610.113C161.365 597.217 171.773 585.581 174.262 584.256C176.718 582.931 228.723 533.156 289.81 473.653C350.897 414.117 427.207 339.94 459.399 308.815C491.591 277.657 518.127 250.346 518.385 248.116C518.741 244.916 489.555 244.463 236.027 247.922L116.439 128.107C37.155 48.6615 -2.05062 7.19343 0.082581 5.09255Z" fill="#FEFEFE"/></svg>
+        My Work
+    </h2>
+
+    <!-- Row 1 with heading -->
+    <div class="works-row">
+      <div class="works-row-header">
+        <div class="header-empty"></div>
+        <div class="header-empty"></div>
+        <div class="header-text">
+          <p>My showcase<br><b>the best i've ever built</b></p>
+        </div>
+      </div>
+      <div class="brutalist-grid">
+        <div class="brutal-card">
+          <div class="brutal-image-wrap">
+            <div class="brutal-image" style="background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop') no-repeat center center / cover;" data-speed="0.1"></div>
+            <button class="view-details-btn">View details <span class="btn-arrow">&rarr;</span></button>
+          </div>
+          <div class="brutal-info">
+            <h3>R—K</h3>
+            <span class="brutal-role">Identity + Art Direction</span>
+          </div>
+        </div>
+        <div class="brutal-card">
+          <div class="brutal-image-wrap">
+            <div class="brutal-image" style="background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop') no-repeat center center / cover;" data-speed="0.1"></div>
+            <button class="view-details-btn">View details <span class="btn-arrow">&rarr;</span></button>
+          </div>
+          <div class="brutal-info">
+            <h3>Prop Films</h3>
+            <span class="brutal-role">Exploration</span>
+          </div>
+        </div>
+        <div class="brutal-card wide-card">
+          <div class="brutal-image-wrap">
+            <div class="brutal-image" style="background: url('https://images.unsplash.com/photo-1550859491-19011afb96f5?q=80&w=1600&auto=format&fit=crop') no-repeat center center / cover;" data-speed="0.1"></div>
+            <button class="view-details-btn">View details <span class="btn-arrow">&rarr;</span></button>
+          </div>
+          <div class="brutal-info">
+            <h3>Buyt Bags</h3>
+            <span class="brutal-role">Web Development</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 without heading -->
+    <div class="works-row reveal-up">
+      <div class="brutalist-grid">
+        <div class="brutal-card">
+          <div class="brutal-image-wrap">
+            <div class="brutal-image" style="background: url('https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=800&auto=format&fit=crop') no-repeat center center / cover;" data-speed="0.1"></div>
+            <button class="view-details-btn">View details <span class="btn-arrow">&rarr;</span></button>
+          </div>
+          <div class="brutal-info">
+            <h3>TA Design</h3>
+            <span class="brutal-role">Web Design + Development</span>
+          </div>
+        </div>
+        <div class="brutal-card">
+          <div class="brutal-image-wrap">
+            <div class="brutal-image" style="background: url('https://images.unsplash.com/photo-1551244072-5d12893278ab?q=80&w=800&auto=format&fit=crop') no-repeat center center / cover;" data-speed="0.1"></div>
+            <button class="view-details-btn">View details <span class="btn-arrow">&rarr;</span></button>
+          </div>
+          <div class="brutal-info">
+            <h3>Maison</h3>
+            <span class="brutal-role">Exploration</span>
+          </div>
+        </div>
+        <div class="brutal-card wide-card">
+          <div class="brutal-image-wrap">
+            <div class="brutal-image" style="background: url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1600&auto=format&fit=crop') no-repeat center center / cover;" data-speed="0.1"></div>
+            <button class="view-details-btn">View details <span class="btn-arrow">&rarr;</span></button>
+          </div>
+          <div class="brutal-info">
+            <h3>Chris+Hansen</h3>
+            <span class="brutal-role">Identity + Art Direction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Motto -->
+  <section id="my-motto" class="my-motto reveal-up" style="margin: 0 auto;">
+    <h2 class="works-header reveal-text" style="font-size: 2rem; margin-bottom: 4rem; justify-content: center;">
+        <svg class="hero-star" style="width: 1.5rem; height: 1.5rem;" viewBox="0 0 940 960" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.082581 5.09255C1.86025 3.31489 27.9111 1.40794 58.2607 0.826155C88.4811 0.244373 238.29 -0.143481 669.131 0.0504462L693.372 8.9711C706.721 13.8516 725.564 22.5783 735.325 28.3638C745.054 34.117 763.574 49.3726 776.535 62.2688C795.022 80.6918 803.167 92.0689 814.641 115.599C822.689 132.05 831.578 156.388 834.357 169.737C837.913 186.641 838.979 203.739 837.848 226.299C836.62 251.219 834.066 264.567 826.762 284.477C821.526 298.698 813.542 316.152 809.018 323.262C804.493 330.373 796.638 341.33 791.532 347.6C786.425 353.871 751.001 389.456 712.765 426.658C674.561 463.86 617.094 519.743 585.096 550.836C553.098 581.929 503.227 630.702 474.267 659.241C445.307 687.781 421.68 712.571 421.745 714.349C421.81 716.482 469.386 716.676 704.685 712.248L824.273 831.998C921.754 929.641 943.086 952.524 939.66 955.885C936.298 959.15 867.842 959.99 271.581 959.99L247.34 951.069C234.023 946.189 215.148 937.462 205.387 931.677C195.658 925.924 177.138 910.668 164.177 897.772C145.69 879.349 137.545 867.972 126.071 844.442C118.023 827.99 109.134 803.62 106.355 790.304C102.735 773.044 101.765 756.722 103.026 733.742C103.995 715.965 106.84 694.892 109.361 686.876C111.882 678.86 118.087 663.605 123.162 652.939C128.236 642.273 140.809 623.009 151.087 610.113C161.365 597.217 171.773 585.581 174.262 584.256C176.718 582.931 228.723 533.156 289.81 473.653C350.897 414.117 427.207 339.94 459.399 308.815C491.591 277.657 518.127 250.346 518.385 248.116C518.741 244.916 489.555 244.463 236.027 247.922L116.439 128.107C37.155 48.6615 -2.05062 7.19343 0.082581 5.09255Z" fill="#FEFEFE"/></svg>
+        My Motto
+    </h2>
+    <div class="manifesto-line" style="margin: 0 auto;">
+        <div class="cube"></div>
+        <p style="text-align: center;">Simplicity is the ultimate sophistication.<br>Designing with intent and brutalist precision.</p>
+        <div class="cube"></div>
+    </div>
+  </section>
+
+  <!-- Experience Blocks -->
+  <section class="experience reveal-up">
+    <div class="exp-container" style="width: 100%;">
+        <h2 class="works-header reveal-text" style="font-size: 2rem; margin-bottom: 3rem;">
+            <svg class="hero-star" style="width: 1.5rem; height: 1.5rem;" viewBox="0 0 940 960" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.082581 5.09255C1.86025 3.31489 27.9111 1.40794 58.2607 0.826155C88.4811 0.244373 238.29 -0.143481 669.131 0.0504462L693.372 8.9711C706.721 13.8516 725.564 22.5783 735.325 28.3638C745.054 34.117 763.574 49.3726 776.535 62.2688C795.022 80.6918 803.167 92.0689 814.641 115.599C822.689 132.05 831.578 156.388 834.357 169.737C837.913 186.641 838.979 203.739 837.848 226.299C836.62 251.219 834.066 264.567 826.762 284.477C821.526 298.698 813.542 316.152 809.018 323.262C804.493 330.373 796.638 341.33 791.532 347.6C786.425 353.871 751.001 389.456 712.765 426.658C674.561 463.86 617.094 519.743 585.096 550.836C553.098 581.929 503.227 630.702 474.267 659.241C445.307 687.781 421.68 712.571 421.745 714.349C421.81 716.482 469.386 716.676 704.685 712.248L824.273 831.998C921.754 929.641 943.086 952.524 939.66 955.885C936.298 959.15 867.842 959.99 271.581 959.99L247.34 951.069C234.023 946.189 215.148 937.462 205.387 931.677C195.658 925.924 177.138 910.668 164.177 897.772C145.69 879.349 137.545 867.972 126.071 844.442C118.023 827.99 109.134 803.62 106.355 790.304C102.735 773.044 101.765 756.722 103.026 733.742C103.995 715.965 106.84 694.892 109.361 686.876C111.882 678.86 118.087 663.605 123.162 652.939C128.236 642.273 140.809 623.009 151.087 610.113C161.365 597.217 171.773 585.581 174.262 584.256C176.718 582.931 228.723 533.156 289.81 473.653C350.897 414.117 427.207 339.94 459.399 308.815C491.591 277.657 518.127 250.346 518.385 248.116C518.741 244.916 489.555 244.463 236.027 247.922L116.439 128.107C37.155 48.6615 -2.05062 7.19343 0.082581 5.09255Z" fill="#FEFEFE"/></svg>
+            Experience
+        </h2>
+        <div class="exp-grid">
+            <!-- Block 1 -->
+            <div class="exp-block">
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+                
+                <h4 class="company-name">Studio Namma</h4>
+                <div class="skills-tag">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L9 9l-8 3 8 3 3 8 3-8 8-3-8-3z"/></svg>
+                    Skills: Art Direction, Design
+                </div>
+                <div class="exp-date" style="margin-bottom: 2rem;">2024 — Present</div>
+                <button class="view-details-btn" data-company="Studio Namma" data-date="2024 — Present" data-desc="Lead the art direction and interactive design for high-profile architecture agencies. Built complete brutalist UI systems from the ground up, directing motion, typography, and frontend aesthetics. Handled large scale deployment and continuous iteration loops with stakeholders.">View details <span class="btn-arrow">&rarr;</span></button>
+            </div>
+            
+            <!-- Block 2 -->
+            <div class="exp-block">
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+                
+                <h4 class="company-name">Kinetix Space</h4>
+                <div class="skills-tag">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L9 9l-8 3 8 3 3 8 3-8 8-3-8-3z"/></svg>
+                    Skills: Web Dev, Interaction
+                </div>
+                <div class="exp-date" style="margin-bottom: 2rem;">2022 — 2024</div>
+                <button class="view-details-btn" data-company="Kinetix Space" data-date="2022 — 2024" data-desc="Conceptual digital platform utilizing stark contrasts and deep motion language. Integrated advanced WebGL interactions and GSAP scrolling behaviors. Architected robust frontend state flow for seamless dynamic routing without hard reloads.">View details <span class="btn-arrow">&rarr;</span></button>
+            </div>
+
+            <!-- Block 3 -->
+            <div class="exp-block">
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+                
+                <h4 class="company-name">Void Interface</h4>
+                <div class="skills-tag">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L9 9l-8 3 8 3 3 8 3-8 8-3-8-3z"/></svg>
+                    Skills: UI/UX
+                </div>
+                <div class="exp-date" style="margin-bottom: 2rem;">2020 — 2022</div>
+                <button class="view-details-btn" data-company="Void Interface" data-date="2020 — 2022" data-desc="Minimalist mobile banking FinTech startup exploring zero-border components and typography-forward layouts. Designed user flows to minimize latency and friction when tracking expenses. Built a scalable component library consumed by the native iOS teams.">View details <span class="btn-arrow">&rarr;</span></button>
+            </div>
+
+            <!-- Block 4 -->
+            <div class="exp-block">
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+                
+                <h4 class="company-name">Prop Films</h4>
+                <div class="skills-tag">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1L9 9l-8 3 8 3 3 8 3-8 8-3-8-3z"/></svg>
+                    Skills: Visual Exploration
+                </div>
+                <div class="exp-date" style="margin-bottom: 2rem;">2018 — 2020</div>
+                <button class="view-details-btn" data-company="Prop Films" data-date="2018 — 2020" data-desc="A boutique experimental film studio focusing on avant-garde narrative and visual exploration. Managed post-production graphical overlays. Assisted in storyboard conception and experimental video manipulation workflows.">View details <span class="btn-arrow">&rarr;</span></button>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="case-studies" class="case-studies reveal-up">
+    <h2 class="works-header reveal-text" style="font-size: 2rem; margin-bottom: 3rem;">
+        <svg class="hero-star" style="width: 1.5rem; height: 1.5rem;" viewBox="0 0 940 960" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.082581 5.09255C1.86025 3.31489 27.9111 1.40794 58.2607 0.826155C88.4811 0.244373 238.29 -0.143481 669.131 0.0504462L693.372 8.9711C706.721 13.8516 725.564 22.5783 735.325 28.3638C745.054 34.117 763.574 49.3726 776.535 62.2688C795.022 80.6918 803.167 92.0689 814.641 115.599C822.689 132.05 831.578 156.388 834.357 169.737C837.913 186.641 838.979 203.739 837.848 226.299C836.62 251.219 834.066 264.567 826.762 284.477C821.526 298.698 813.542 316.152 809.018 323.262C804.493 330.373 796.638 341.33 791.532 347.6C786.425 353.871 751.001 389.456 712.765 426.658C674.561 463.86 617.094 519.743 585.096 550.836C553.098 581.929 503.227 630.702 474.267 659.241C445.307 687.781 421.68 712.571 421.745 714.349C421.81 716.482 469.386 716.676 704.685 712.248L824.273 831.998C921.754 929.641 943.086 952.524 939.66 955.885C936.298 959.15 867.842 959.99 271.581 959.99L247.34 951.069C234.023 946.189 215.148 937.462 205.387 931.677C195.658 925.924 177.138 910.668 164.177 897.772C145.69 879.349 137.545 867.972 126.071 844.442C118.023 827.99 109.134 803.62 106.355 790.304C102.735 773.044 101.765 756.722 103.026 733.742C103.995 715.965 106.84 694.892 109.361 686.876C111.882 678.86 118.087 663.605 123.162 652.939C128.236 642.273 140.809 623.009 151.087 610.113C161.365 597.217 171.773 585.581 174.262 584.256C176.718 582.931 228.723 533.156 289.81 473.653C350.897 414.117 427.207 339.94 459.399 308.815C491.591 277.657 518.127 250.346 518.385 248.116C518.741 244.916 489.555 244.463 236.027 247.922L116.439 128.107C37.155 48.6615 -2.05062 7.19343 0.082581 5.09255Z" fill="#FEFEFE"/></svg>
+        Case Studies
+    </h2>
+    <div class="cs-grid">
+        <!-- CS 1 -->
+        <div class="cs-item">
+            <div class="cs-image-wrap">
+                <div class="cs-image" style="background: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800') no-repeat center center / cover;"></div>
+                <button class="view-details-btn cs-btn" data-company="Rebrand Strategy" data-date="March '26" data-desc="When is it time for a Rebrand? Exploring the metrics and intuitive signals that dictate a necessary brand evolution.">View details <span class="btn-arrow">&rarr;</span></button>
+            </div>
+            <div class="cs-info">
+                <h4>When is it time for a Rebrand?</h4>
+                <p>4m read-time. Mon 9 March '26<br>Author: Jane Doe</p>
+            </div>
+        </div>
+
+        <!-- CS 2 -->
+        <div class="cs-item">
+            <div class="cs-image-wrap">
+                <div class="cs-image" style="background: url('https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=800') no-repeat center center / cover;"></div>
+                <button class="view-details-btn cs-btn" data-company="R—K Project" data-date="February '26" data-desc="Process of a R—K project. A deep dive into the methodology behind our most successful campaigns.">View details <span class="btn-arrow">&rarr;</span></button>
+            </div>
+            <div class="cs-info">
+                <h4>Process of a R—K project</h4>
+                <p>3m read-time. Fri 20 February '26<br>Author: Jane Doe</p>
+            </div>
+        </div>
+
+        <!-- CS 3 -->
+        <div class="cs-item">
+            <div class="cs-image-wrap">
+                <div class="cs-image" style="background: url('https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=800') no-repeat center center / cover;"></div>
+                <button class="view-details-btn cs-btn" data-company="Brand Cornerstone" data-date="January '26" data-desc="Presence as a brand cornerstone. Understanding how market presence translates to brand equity.">View details <span class="btn-arrow">&rarr;</span></button>
+            </div>
+            <div class="cs-info">
+                <h4>Presence as a brand cornerstone</h4>
+                <p>3m read-time. Fri 9 January '26<br>Author: Jane Doe</p>
+            </div>
+        </div>
+
+        <!-- CS 4 -->
+        <div class="cs-item">
+            <div class="cs-image-wrap">
+                <div class="cs-image" style="background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800') no-repeat center center / cover;"></div>
+                <button class="view-details-btn cs-btn" data-company="Creation of R—K" data-date="December '25" data-desc="Creation of the R—K brand. The inception and foundational building blocks of a minimal aesthetic.">View details <span class="btn-arrow">&rarr;</span></button>
+            </div>
+            <div class="cs-info">
+                <h4>Creation of the R—K brand</h4>
+                <p>5m read-time. Fri 5 December '25<br>Author: Jane Doe</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials reveal-up">
+
+    <h2 class="works-header reveal-text" style="font-size: 2rem; margin-bottom: 3rem;">
+        <svg class="hero-star" style="width: 1.5rem; height: 1.5rem;" viewBox="0 0 940 960" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.082581 5.09255C1.86025 3.31489 27.9111 1.40794 58.2607 0.826155C88.4811 0.244373 238.29 -0.143481 669.131 0.0504462L693.372 8.9711C706.721 13.8516 725.564 22.5783 735.325 28.3638C745.054 34.117 763.574 49.3726 776.535 62.2688C795.022 80.6918 803.167 92.0689 814.641 115.599C822.689 132.05 831.578 156.388 834.357 169.737C837.913 186.641 838.979 203.739 837.848 226.299C836.62 251.219 834.066 264.567 826.762 284.477C821.526 298.698 813.542 316.152 809.018 323.262C804.493 330.373 796.638 341.33 791.532 347.6C786.425 353.871 751.001 389.456 712.765 426.658C674.561 463.86 617.094 519.743 585.096 550.836C553.098 581.929 503.227 630.702 474.267 659.241C445.307 687.781 421.68 712.571 421.745 714.349C421.81 716.482 469.386 716.676 704.685 712.248L824.273 831.998C921.754 929.641 943.086 952.524 939.66 955.885C936.298 959.15 867.842 959.99 271.581 959.99L247.34 951.069C234.023 946.189 215.148 937.462 205.387 931.677C195.658 925.924 177.138 910.668 164.177 897.772C145.69 879.349 137.545 867.972 126.071 844.442C118.023 827.99 109.134 803.62 106.355 790.304C102.735 773.044 101.765 756.722 103.026 733.742C103.995 715.965 106.84 694.892 109.361 686.876C111.882 678.86 118.087 663.605 123.162 652.939C128.236 642.273 140.809 623.009 151.087 610.113C161.365 597.217 171.773 585.581 174.262 584.256C176.718 582.931 228.723 533.156 289.81 473.653C350.897 414.117 427.207 339.94 459.399 308.815C491.591 277.657 518.127 250.346 518.385 248.116C518.741 244.916 489.555 244.463 236.027 247.922L116.439 128.107C37.155 48.6615 -2.05062 7.19343 0.082581 5.09255Z" fill="#FEFEFE"/></svg>
+        Praise & Accolades
+    </h2>
+
+    <div class="marquee-container">
+        <!-- Row 1 (Scrolling Left) -->
+        <div class="marquee-track track-left">
+            <!-- Duplicated multiple times to ensure smooth infinite loop -->
+            <% 4.times do %>
+            <div class="testimonial-card">
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+                <div class="quote-icon">“</div>
+                <p>Their ability to capture our brand essence in every project is unparalleled - an invaluable creative collaborator.</p>
+                <div class="ts-author-info">
+                    <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?q=80&w=150" alt="Avatar">
+                    <div class="ts-author-details">
+                        <strong>Isabella Rodriguez</strong>
+                        <span>CEO and Co-founder of ABC Company</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+                <div class="quote-icon">“</div>
+                <p>Creative geniuses who listen, understand, and craft captivating visuals - an agency that truly understands our needs.</p>
+                <div class="ts-author-info">
+                    <img src="https://images.unsplash.com/photo-1560159905-ebdd4851ab48?q=80&w=150" alt="Avatar">
+                    <div class="ts-author-details">
+                        <strong>Gabrielle Williams</strong>
+                        <span>CEO and Co-founder of ABC Company</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+                <div class="quote-icon">“</div>
+                <p>Exceeded our expectations with innovative designs that brought our vision to life - a truly remarkable creative agency.</p>
+                <div class="ts-author-info">
+                    <img src="https://images.unsplash.com/photo-1592501062608-8e62241cf03f?q=80&w=150" alt="Avatar">
+                    <div class="ts-author-details">
+                        <strong>Samantha Johnson</strong>
+                        <span>CEO and Co-founder of ABC Company</span>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+
+        <!-- Row 2 (Scrolling Right) -->
+        <div class="marquee-track track-right">
+            <% 4.times do %>
+            <div class="testimonial-card">
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+                <div class="quote-icon">“</div>
+                <p>A refreshing and imaginative agency that consistently delivers exceptional results - highly recommended for any project.</p>
+                <div class="ts-author-info">
+                    <img src="https://images.unsplash.com/photo-1605372481075-81dccc78fe2a?q=80&w=150" alt="Avatar">
+                    <div class="ts-author-details">
+                        <strong>Victoria Thompson</strong>
+                        <span>CEO and Co-founder of ABC Company</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+                <div class="quote-icon">“</div>
+                <p>Their team\'s artistic flair and strategic approach resulted in remarkable campaigns - a reliable creative partner.</p>
+                <div class="ts-author-info">
+                    <img src="https://images.unsplash.com/photo-1550525811-e5869dd03032?q=80&w=150" alt="Avatar">
+                    <div class="ts-author-details">
+                        <strong>John Peter</strong>
+                        <span>CEO and Co-founder of ABC Company</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon">“</div>
+                <p>From concept to execution, their creativity knows no bounds - a game-changer for our brand\'s success.</p>
+                <div class="ts-author-info">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150" alt="Avatar">
+                    <div class="ts-author-details">
+                        <strong>Natalie Martinez</strong>
+                        <span>CEO and Co-founder of ABC Company</span>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer reveal-up">
+    <!-- Top Grid -->
+    <div class="footer-grid">
+        <div class="footer-col">
+            <a href="tel:+31630951453" class="footer-link">
+                <div class="link-content">
+                    <span class="default-text">92 324 4897599 <span class="btn-arrow">&rarr;</span></span>
+                    <span class="hover-text">Call me <span class="btn-arrow">&rarr;</span></span>
+                    <div class="link-underline"></div>
+                </div>
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+            </a>
+        </div>
+        <div class="footer-col">
+            <a href="mailto:work@example.com" class="footer-link">
+                <div class="link-content">
+                    <span class="default-text">mzaftw@gmail.com <span class="btn-arrow">&rarr;</span></span>
+                    <span class="hover-text">Contact via email <span class="btn-arrow">&rarr;</span></span>
+                    <div class="link-underline"></div>
+                </div>
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+            </a>
+        </div>
+        <div class="footer-col">
+            <a href="#collab" class="footer-link">
+                <div class="link-content">
+                    <span class="default-text">Start collaboration <span class="btn-arrow">&rarr;</span></span>
+                    <span class="hover-text">Lets Get to Work <span class="btn-arrow">&rarr;</span></span>
+                    <div class="link-underline"></div>
+                </div>
+                <div class="cube corner top-left"></div>
+                <div class="cube corner top-right"></div>
+                <div class="cube corner bottom-left"></div>
+                <div class="cube corner bottom-right"></div>
+            </a>
+        </div>
+        <div class="footer-col" style="border-right: none;">
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="footer-banner">
+        <h2>zainftw</h2>
+    </div>
+
+    <!-- Bottom Grid -->
+    <div class="footer-bottom-grid">
+        <div class="f-bot-col">
+            <p>Building for agencies<br>& brands</p>
+        </div>
+        <div class="f-bot-col">
+            <p>Availability from<br>May '26</p>
+        </div>
+        <div class="f-bot-col">
+            <p>Instagram<br>@archiveofzain</p>
+        </div>
+        <div class="f-bot-col">
+            <p>LinkedIn<br>@Zain Athar</p>
+        </div>
+    </div>
+  </footer>>
+</main>
+
+<!-- Bottom Sheet Silhouette Modal -->
+<div class="silhouette-modal" id="exp-modal">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-sheet">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <div class="modal-content">
+            <h3 id="modal-title">Company</h3>
+            <span id="modal-date" class="modal-date">Date</span>
+            <hr class="modal-divider">
+            <p id="modal-desc" class="modal-desc">...</p>
+            <div id="modal-gallery" class="modal-gallery"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Initialize Lenis for buttery smooth scrolling
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // standard ease
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+    });
+
+    // Sync GSAP ticker with Lenis (if we use GSAP later, good for parallax)
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+
+    // 2. Intersection Observer for Reveal animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                // Optional: Stop observing once revealed
+                // observer.unobserve(entry.target); 
+            }
+        });
+    }, {
+        threshold: 0.15, // trigger when 15% visible
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    document.querySelectorAll('.reveal-up, .reveal-text').forEach((el) => {
+        observer.observe(el); // initial kickoff
+        // Ensure elements currently in view pop in
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight) { el.classList.add('in-view'); }
+    });
+
+    // 3. Simple Parallax on images using GSAP and ScrollTrigger
+    gsap.utils.toArray('.brutal-image').forEach(image => {
+        gsap.to(image, {
+            yPercent: 20, // Move the image down slightly as we scroll
+            ease: "none",
+            scrollTrigger: {
+                trigger: image.parentElement,
+                start: "top bottom", 
+                end: "bottom top",
+                scrub: true
+            }
+        });
+    });
+
+    // 4. Update Time
+    function updateTime() {
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('en-GB', { hour12: false });
+        const timeEl = document.getElementById('current-time');
+        if (timeEl) timeEl.innerText = timeStr;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    // 5. Modal Logic
+    const modal = document.getElementById('exp-modal');
+    const backdrop = document.getElementById('modal-backdrop');
+    const closeBtn = document.getElementById('modal-close');
+    
+    // Content nodes
+    const mTitle = document.getElementById('modal-title');
+    const mDate = document.getElementById('modal-date');
+    const mDesc = document.getElementById('modal-desc');
+    const mGallery = document.getElementById('modal-gallery');
+
+    // Hardcoded dummy image mappings for showcase
+    const showcaseImages = {
+        'Studio Namma': ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800', 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800'],
+        'Kinetix Space': ['https://images.unsplash.com/photo-1550859491-19011afb96f5?q=80&w=800', 'https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=800'],
+        'Void Interface': ['https://images.unsplash.com/photo-1551244072-5d12893278ab?q=80&w=800'],
+        'Prop Films': ['https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=800', 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800']
+    };
+
+    function openModal(btn) {
+        const company = btn.getAttribute('data-company');
+        mTitle.innerText = company;
+        mDate.innerText = btn.getAttribute('data-date');
+        mDesc.innerText = btn.getAttribute('data-desc');
+        
+        mGallery.innerHTML = ''; // clear old images
+        if (showcaseImages[company]) {
+            showcaseImages[company].forEach(url => {
+                const img = document.createElement('img');
+                img.src = url;
+                mGallery.appendChild(img);
+            });
+        }
+
+        modal.classList.add('open');
+        lenis.stop(); // Stop scroll while modal is up
+    }
+
+    function closeModal() {
+        modal.classList.remove('open');
+        lenis.start(); // Restore scroll
+    }
+
+    document.querySelectorAll('.view-details-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(btn);
+        });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+
+
+});
+</script>
