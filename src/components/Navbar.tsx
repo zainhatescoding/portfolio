@@ -38,7 +38,7 @@ export default function Navbar() {
       <nav className={`hero-nav ${isScrolled ? 'hidden' : ''}`}>
         <div className="nav-logo">
           <Link href="/" className="logo-link">
-            <Logo style={{ width: 60, height: 60 }} />
+            <Logo style={{ width: 44, height: 44 }} />
           </Link>
         </div>
 

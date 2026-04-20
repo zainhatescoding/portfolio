@@ -256,7 +256,8 @@ h6 {
 .hero-nav .nav-logo {
     display: flex;
     align-items: center;
-    height: 1.25rem;
+    padding-top: 12px;
+    height: 44px;
     /* Optical center of the headline row */
 }
 
@@ -384,6 +385,19 @@ h6 {
 .compact-nav.visible {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
+}
+
+/* Mobile Overrides: Hide Hero Nav, Show Compact Nav Always */
+@media (max-width: 768px) {
+    .hero-nav {
+        display: none !important;
+    }
+
+    .compact-nav {
+        transform: translateX(-50%) translateY(0) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
 }
 
 /* Expanding Pill Effect */
@@ -547,9 +561,9 @@ h6 {
     transform-origin: left;
 }
 
-.nav-logo svg {
-    width: 30px !important;
-    height: 30px !important;
+.compact-nav .nav-logo svg {
+    width: 30px;
+    height: 30px;
 }
 
 /* Floating Contact Button */
