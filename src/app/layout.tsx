@@ -6,6 +6,9 @@ import LenisProvider from "@/components/LenisProvider";
 export const metadata: Metadata = {
   title: "Muhammad Zain | Portfolio",
   description: "Minimalist brutalist portfolio of Muhammad Zain, experienced designer and developer.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -15,9 +18,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/icon.png" type="image/png" />
-      </head>
       <body>
         <LenisProvider>
           <CustomCursor />
