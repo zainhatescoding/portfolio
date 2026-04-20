@@ -256,7 +256,7 @@ h6 {
 .hero-nav .nav-logo {
     display: flex;
     align-items: center;
-    padding-top: 12px;
+    padding-top: 10px;
     height: 44px;
     /* Optical center of the headline row */
 }

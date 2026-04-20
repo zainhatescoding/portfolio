@@ -5,7 +5,7 @@ import LenisProvider from "@/components/LenisProvider";
 
 export const metadata: Metadata = {
   title: "Muhammad Zain | Portfolio",
-  description: "Minimalist brutalist portfolio of Muhammad Zain, experienced designer and developer.",
+  description: "Portfolio of Muhammad Zain, a designer.",
   icons: {
     icon: "/favicon.svg",
   },

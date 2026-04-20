@@ -20,7 +20,7 @@ export default function Navbar() {
 
     const timer = setInterval(updateTime, 1000);
     window.addEventListener('scroll', handleScroll);
-    
+
     updateTime();
     handleScroll();
 
@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <div className="nav-wrapper">
       <div className={`nav-gradient-overlay ${isScrolled ? 'opacity-0' : ''}`} />
-      
+
       {/* Hero Navigation - Visible at top */}
       <nav className={`hero-nav ${isScrolled ? 'hidden' : ''}`}>
         <div className="nav-logo">
@@ -49,12 +49,12 @@ export default function Navbar() {
             <Link href="#insights" className="nav-link">Experience</Link>
           </div>
           <div className="nav-col">
-            <span className="nav-title">● About</span>
+            <span className="nav-title">▶ About</span>
             <Link href="#about" className="nav-link">About Me</Link>
             <Link href="#connect" className="nav-link">Connect</Link>
           </div>
           <div className="nav-col">
-            <span className="nav-title">■ POC</span>
+            <span className="nav-title">▶ POC</span>
             <Link href="#brands" className="nav-link">Testimonials</Link>
             <Link href="#agencies" className="nav-link">Case Studies</Link>
           </div>
@@ -90,7 +90,7 @@ export default function Navbar() {
               <Link href="#insights" className="nav-link">Experience</Link>
             </div>
           </div>
-          
+
           <div className="nav-col">
             <button className="nav-title">
               About <ChevronDown size={12} className="chevron-icon" />
