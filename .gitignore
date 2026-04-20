@@ -1,19 +1,31 @@
-# Ignore sensitive files
-/config/master.key
-/config/credentials.yml.enc
+# Next.js
+/.next/
+/out/
+/build
 
-# Ignore database files
-/storage/*.sqlite3
-/storage/*.sqlite3-journal
-/storage/*.sqlite3-shm
-/storage/*.sqlite3-wal
+# Production
+/node_modules
+/.pnp
+.pnp.js
 
-# Ignore logs and temp files
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+# Testing
+/coverage
 
-# Ignore OS files
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# OS
 .DS_Store
 Thumbs.db
