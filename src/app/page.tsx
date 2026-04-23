@@ -8,6 +8,7 @@ import ExperienceBlock from '@/components/ExperienceBlock';
 import Marquee from '@/components/Marquee';
 import DetailsModal from '@/components/DetailsModal';
 import SectionHeader from '@/components/SectionHeader';
+import CaseStudyCard from '@/components/CaseStudyCard';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -100,7 +101,7 @@ export default function Home() {
         <div className="hero-video-wrapper">
           <video 
             id="hero-bg-video" 
-            src="/background.mp4" 
+            src="/fnf.mp4" 
             autoPlay 
             loop 
             muted 
@@ -187,6 +188,41 @@ export default function Home() {
               onOpen={openModal}
             />
           </div>
+        </div>
+      </section>
+
+      {/* Case Studies */}
+      <section className="case-studies">
+        <SectionHeader title="Case Studies" />
+        <div className="cs-grid">
+          <CaseStudyCard
+            title="When is it time for a Rebrand?"
+            readTime="4m read-time"
+            date="Mon 9 March '26"
+            author="Jane Doe"
+            imageUrl="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
+          />
+          <CaseStudyCard
+            title="Process of a R—K project"
+            readTime="3m read-time"
+            date="Fri 20 February '26"
+            author="Jane Doe"
+            imageUrl="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=800&auto=format&fit=crop"
+          />
+          <CaseStudyCard
+            title="Presence as a brand cornerstone"
+            readTime="3m read-time"
+            date="Fri 9 January '26"
+            author="Jane Doe"
+            imageUrl="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=800&auto=format&fit=crop"
+          />
+          <CaseStudyCard
+            title="Creation of the R—K brand"
+            readTime="5m read-time"
+            date="Fri 5 December '25"
+            author="Jane Doe"
+            imageUrl="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=800&auto=format&fit=crop"
+          />
         </div>
       </section>
 

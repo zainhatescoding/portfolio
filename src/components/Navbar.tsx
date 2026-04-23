@@ -44,12 +44,12 @@ export default function Navbar() {
 
         <div className="nav-columns">
           <div className="nav-col">
-            <span className="nav-title">▶ Work</span>
+            <span className="nav-title">▶ Quick Links</span>
             <Link href="#work" className="nav-link">My Work</Link>
             <Link href="#insights" className="nav-link">Experience</Link>
           </div>
           <div className="nav-col">
-            <span className="nav-title">▶ About</span>
+            <span className="nav-title">▶ Narrative</span>
             <Link href="#about" className="nav-link">About Me</Link>
             <Link href="#connect" className="nav-link">Connect</Link>
           </div>
