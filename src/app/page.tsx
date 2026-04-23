@@ -99,13 +99,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero hero-bottom-centered">
         <div className="hero-video-wrapper">
-          <video 
-            id="hero-bg-video" 
-            src="/fnf.mp4" 
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
+          <video
+            id="hero-bg-video"
+            src="/newvid.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
             poster="/poster.jpg"
             preload="metadata"
             className="video-loading"
@@ -116,7 +116,7 @@ export default function Home() {
         <div className="hero-content-wrapper">
           <h1 className="hero-headline reveal-text">Muhammad Zain.</h1>
           <h2 className="hero-sub reveal-text" style={{ transitionDelay: '0.1s' }}>
-            few years of design,<br />experienced by me.
+            Design speaks,<br />so do I.
           </h2>
           <div className="hero-sub-bottom reveal-text" style={{ transitionDelay: '0.2s' }}>
             2026 to the Future
@@ -137,17 +137,17 @@ export default function Home() {
             </div>
           </div>
           <div className="brutalist-grid">
-            <ProjectCard title="R—K" role="Identity + Art Direction" imageUrl="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop" />
-            <ProjectCard title="Prop Films" role="Exploration" imageUrl="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" />
-            <ProjectCard title="Buyt Bags" role="Web Development" imageUrl="https://images.unsplash.com/photo-1550859491-19011afb96f5?q=80&w=1600&auto=format&fit=crop" isWide />
+            <ProjectCard title="Orchids For Peace" role="Web Design." imageUrl="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop" />
+            <ProjectCard title="Email Verify" role="Component Design." imageUrl="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" />
+            <ProjectCard title="Vyxr Labs" role="Website Overhaul." imageUrl="https://images.unsplash.com/photo-1550859491-19011afb96f5?q=80&w=1600&auto=format&fit=crop" isWide />
           </div>
         </div>
 
         <div className="works-row reveal-up">
           <div className="brutalist-grid">
-            <ProjectCard title="TA Design" role="Web Design + Development" imageUrl="https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=800&auto=format&fit=crop" />
-            <ProjectCard title="Maison" role="Exploration" imageUrl="https://images.unsplash.com/photo-1551244072-5d12893278ab?q=80&w=800&auto=format&fit=crop" />
-            <ProjectCard title="Chris+Hansen" role="Identity + Art Direction" imageUrl="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1600&auto=format&fit=crop" isWide />
+            <ProjectCard title="Vyxr Labs Social" role="Media Design." imageUrl="https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=800&auto=format&fit=crop" />
+            <ProjectCard title="Limited Shinigami" role="Header Design." imageUrl="https://images.unsplash.com/photo-1551244072-5d12893278ab?q=80&w=800&auto=format&fit=crop" />
+            <ProjectCard title="Identity (Taqi)" role="Identity Design." imageUrl="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1600&auto=format&fit=crop" isWide />
           </div>
         </div>
       </section>
@@ -157,34 +157,38 @@ export default function Home() {
         <SectionHeader title="My Motto" style={{ justifyContent: 'center' }} />
         <div className="manifesto-line" style={{ margin: '0 auto' }}>
           <div className="cube"></div>
-          <p style={{ textAlign: 'center' }}>Simplicity is the ultimate sophistication.<br />Designing with intent and brutalist precision.</p>
+          <p style={{ textAlign: 'center' }}>Simplicity is the ultimate sophistication.<br />Designing with intent and crystal like precision.</p>
           <div className="cube"></div>
         </div>
       </section>
 
       {/* Experience */}
-      <section className="experience">
+      <section id="experience" className="experience">
         <div className="exp-container" style={{ width: '100%' }}>
           <SectionHeader title="Experience" />
           <div className="exp-grid">
-            <ExperienceBlock 
-              company="Studio Namma" skills="Art Direction, Design" date="2024 — Present" 
-              description="Lead the art direction and interactive design for high-profile architecture agencies. Built complete brutalist UI systems from the ground up, directing motion, typography, and frontend aesthetics. Handled large scale deployment and continuous iteration loops with stakeholders." 
+            <ExperienceBlock
+              company="Paymo" skills="Design Systems, UI/UX" date="2025 Apr — 2025 Jun"
+              logoUrl="/Paymo.svg"
+              description="Lead the art direction and interactive design for high-profile architecture agencies. Built complete brutalist UI systems from the ground up, directing motion, typography, and frontend aesthetics. Handled large scale deployment and continuous iteration loops with stakeholders."
               onOpen={openModal}
             />
-            <ExperienceBlock 
-              company="Kinetix Space" skills="Web Dev, Interaction" date="2022 — 2024" 
-              description="Conceptual digital platform utilizing stark contrasts and deep motion language. Integrated advanced WebGL interactions and GSAP scrolling behaviors. Architected robust frontend state flow for seamless dynamic routing without hard reloads." 
+            <ExperienceBlock
+              company="Vyxr Labs" skills="Product Design" date="2025 Jun — 2025 Dec"
+              logoUrl="/Vyxr.svg"
+              description="Conceptual digital platform utilizing stark contrasts and deep motion language. Integrated advanced WebGL interactions and GSAP scrolling behaviors. Architected robust frontend state flow for seamless dynamic routing without hard reloads."
               onOpen={openModal}
             />
-            <ExperienceBlock 
-              company="Void Interface" skills="UI/UX" date="2020 — 2022" 
-              description="Minimalist mobile banking FinTech startup exploring zero-border components and typography-forward layouts. Designed user flows to minimize latency and friction when tracking expenses. Built a scalable component library consumed by the native iOS teams." 
+            <ExperienceBlock
+              company="Clustox" skills="UI/UX, Product Design" date="2025 Dec — Present"
+              logoUrl="/Clustox.svg"
+              description="Minimalist mobile banking FinTech startup exploring zero-border components and typography-forward layouts. Designed user flows to minimize latency and friction when tracking expenses. Built a scalable component library consumed by the native iOS teams."
               onOpen={openModal}
             />
-            <ExperienceBlock 
-              company="Prop Films" skills="Visual Exploration" date="2018 — 2020" 
-              description="A boutique experimental film studio focusing on avant-garde narrative and visual exploration. Managed post-production graphical overlays. Assisted in storyboard conception and experimental video manipulation workflows." 
+            <ExperienceBlock
+              company="The Services Tree" skills="Video Asset Design" date="2025 Sept — 2025 Nov"
+              logoUrl="/TheServicesTree.svg"
+              description="A boutique experimental film studio focusing on avant-garde narrative and visual exploration. Managed post-production graphical overlays. Assisted in storyboard conception and experimental video manipulation workflows."
               onOpen={openModal}
             />
           </div>
@@ -192,42 +196,44 @@ export default function Home() {
       </section>
 
       {/* Case Studies */}
-      <section className="case-studies">
+      <section id="case-studies" className="case-studies">
         <SectionHeader title="Case Studies" />
         <div className="cs-grid">
           <CaseStudyCard
             title="When is it time for a Rebrand?"
             readTime="4m read-time"
             date="Mon 9 March '26"
-            author="Jane Doe"
+            author="Muhammad Zain"
             imageUrl="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
           />
           <CaseStudyCard
             title="Process of a R—K project"
             readTime="3m read-time"
             date="Fri 20 February '26"
-            author="Jane Doe"
+            author="Muhammad Zain"
             imageUrl="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?q=80&w=800&auto=format&fit=crop"
           />
           <CaseStudyCard
             title="Presence as a brand cornerstone"
             readTime="3m read-time"
             date="Fri 9 January '26"
-            author="Jane Doe"
+            author="Muhammad Zain"
             imageUrl="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=800&auto=format&fit=crop"
           />
           <CaseStudyCard
             title="Creation of the R—K brand"
             readTime="5m read-time"
             date="Fri 5 December '25"
-            author="Jane Doe"
+            author="Muhammad Zain"
             imageUrl="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=800&auto=format&fit=crop"
           />
         </div>
       </section>
 
-      <SectionHeader title="Testimonials" style={{ justifyContent: 'center' }} />
-      <Marquee testimonials={testimonials} />
+      <section id="testimonials">
+        <SectionHeader title="Testimonials" style={{ justifyContent: 'center' }} />
+        <Marquee testimonials={testimonials} />
+      </section>
 
       {/* About Me */}
       <section id="about" className="about-me reveal-up">
@@ -239,17 +245,17 @@ export default function Home() {
                 I am a multidisciplinary designer and developer crafted for the future.
               </h2>
               <p className="bio-sub">
-                Merging brutalist precision with sophisticated motion, I craft interfaces that don&apos;t just function—they resonate. Based in the digital landscape, I work at the intersection of aesthetics and utility.
+                Merging brutalist precision with sophisticated motion, I craft interfaces that don&apos;t just function, they resonate. Based in the digital landscape, I work at the intersection of aesthetics and utility.
               </p>
             </div>
           </div>
-          
+
           <div className="about-image-wrap">
             <div className="about-frame">
               <span className="tech-label label-tl">Asset_V1.0</span>
-              <img 
-                src="/3d-logo.png" 
-                alt="Muhammad Zain 3D Logo" 
+              <img
+                src="/3d-logo.png"
+                alt="Muhammad Zain 3D Logo"
                 className="about-logo-3d"
               />
               <span className="tech-label label-br">2026_PRTFL</span>

@@ -4,10 +4,12 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
 import Logo from './Logo';
+import { useTransition } from './TransitionProvider';
 
 export default function Navbar() {
   const [time, setTime] = useState('00:00:00');
   const [isScrolled, setIsScrolled] = useState(false);
+  const { transitionTo } = useTransition();
 
   useEffect(() => {
     const updateTime = () => {
@@ -37,26 +39,38 @@ export default function Navbar() {
       {/* Hero Navigation - Visible at top */}
       <nav className={`hero-nav ${isScrolled ? 'hidden' : ''}`}>
         <div className="nav-logo">
-          <Link href="/" className="logo-link">
+          <button 
+            onClick={() => transitionTo('/')} 
+            className="logo-link" 
+            style={{ 
+              background: 'none', 
+              border: 'none', 
+              cursor: 'pointer', 
+              padding: 0,
+              color: 'var(--text-primary)',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
             <Logo style={{ width: 44, height: 44 }} />
-          </Link>
+          </button>
         </div>
 
         <div className="nav-columns">
           <div className="nav-col">
-            <span className="nav-title">▶ Quick Links</span>
+            <span className="nav-title">Quick Links</span>
             <Link href="#work" className="nav-link">My Work</Link>
-            <Link href="#insights" className="nav-link">Experience</Link>
+            <Link href="#experience" className="nav-link">Experience</Link>
           </div>
           <div className="nav-col">
-            <span className="nav-title">▶ Narrative</span>
+            <span className="nav-title">Narrative</span>
             <Link href="#about" className="nav-link">About Me</Link>
             <Link href="#connect" className="nav-link">Connect</Link>
           </div>
           <div className="nav-col">
-            <span className="nav-title">▶ POC</span>
-            <Link href="#brands" className="nav-link">Testimonials</Link>
-            <Link href="#agencies" className="nav-link">Case Studies</Link>
+            <span className="nav-title">POC</span>
+            <Link href="#testimonials" className="nav-link">Testimonials</Link>
+            <Link href="#case-studies" className="nav-link">Case Studies</Link>
           </div>
         </div>
 
@@ -68,16 +82,34 @@ export default function Navbar() {
               <span>ENS</span>
             </div>
           </div>
-          <Link href="/discover" className="nav-link discover-link">Discover</Link>
+          <button 
+            onClick={() => transitionTo('/discover')} 
+            className="nav-link discover-link"
+            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', fontFamily: 'inherit', padding: 0 }}
+          >
+            Discover
+          </button>
         </div>
       </nav>
 
       {/* Compact Navigation - Slides down on scroll */}
       <nav className={`compact-nav ${isScrolled ? 'visible' : ''}`}>
         <div className="nav-logo">
-          <Link href="/" className="logo-link">
+          <button 
+            onClick={() => transitionTo('/')} 
+            className="logo-link" 
+            style={{ 
+              background: 'none', 
+              border: 'none', 
+              cursor: 'pointer', 
+              padding: 0,
+              color: 'var(--text-primary)',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
             <Logo style={{ width: 32, height: 32 }} />
-          </Link>
+          </button>
         </div>
 
         <div className="nav-columns">
@@ -87,7 +119,7 @@ export default function Navbar() {
             </button>
             <div className="nav-dropdown">
               <Link href="#work" className="nav-link">My Work</Link>
-              <Link href="#insights" className="nav-link">Experience</Link>
+              <Link href="#experience" className="nav-link">Experience</Link>
             </div>
           </div>
 
@@ -106,14 +138,20 @@ export default function Navbar() {
               POC <ChevronDown size={12} className="chevron-icon" />
             </button>
             <div className="nav-dropdown">
-              <Link href="#brands" className="nav-link">Testimonials</Link>
-              <Link href="#agencies" className="nav-link">Case Studies</Link>
+              <Link href="#testimonials" className="nav-link">Testimonials</Link>
+              <Link href="#case-studies" className="nav-link">Case Studies</Link>
             </div>
           </div>
         </div>
 
         <div className="nav-right">
-          <Link href="/discover" className="nav-link discover-link">Discover</Link>
+          <button 
+            onClick={() => transitionTo('/discover')} 
+            className="nav-link discover-link"
+            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', fontFamily: 'inherit', padding: 0 }}
+          >
+            Discover
+          </button>
         </div>
       </nav>
     </div>

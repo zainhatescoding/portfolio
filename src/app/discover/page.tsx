@@ -7,6 +7,7 @@ import DetailsModal from '@/components/DetailsModal';
 import SectionHeader from '@/components/SectionHeader';
 import Logo from '@/components/Logo';
 import Link from 'next/link';
+import { useTransition } from '@/components/TransitionProvider';
 
 const accolades = [
   { title: "Project Alpha", role: "Web Development", date: "2026", desc: "A high-performance web application designed for data visualization.", image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800" },
@@ -22,6 +23,7 @@ const accolades = [
 export default function Discover() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalData, setModalData] = useState<{ title: string; date: string; desc: string; images?: string[] } | null>(null);
+  const { transitionTo } = useTransition();
 
   const openModal = (data: { title: string; date: string; desc: string; image?: string }) => {
     setModalData({ ...data, images: data.image ? [data.image] : [] });
@@ -46,10 +48,29 @@ export default function Discover() {
     <main className="container">
       <nav className="hero-nav">
         <div className="nav-logo">
-          <Logo style={{ width: 40, height: 40 }} />
+          <button 
+            onClick={() => transitionTo('/')} 
+            style={{ 
+              background: 'none', 
+              border: 'none', 
+              cursor: 'pointer', 
+              padding: 0,
+              color: 'var(--text-primary)',
+              display: 'flex',
+              alignItems: 'center'
+            }}
+          >
+            <Logo style={{ width: 40, height: 40 }} />
+          </button>
         </div>
         <div className="nav-right">
-          <Link href="/" className="nav-link discover-link">Home</Link>
+          <button 
+            onClick={() => transitionTo('/')} 
+            className="nav-link discover-link"
+            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', fontFamily: 'inherit', padding: 0 }}
+          >
+            Home
+          </button>
         </div>
       </nav>
 

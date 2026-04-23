@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import LenisProvider from "@/components/LenisProvider";
+import TransitionProvider from "@/components/TransitionProvider";
 
 export const metadata: Metadata = {
   title: "Muhammad Zain | Portfolio",
@@ -20,8 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <LenisProvider>
-          <CustomCursor />
-          {children}
+          <TransitionProvider>
+            <CustomCursor />
+            {children}
+          </TransitionProvider>
         </LenisProvider>
       </body>
     </html>

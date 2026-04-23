@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="site-footer reveal-up">
+    <footer id="connect" className="site-footer reveal-up">
       {/* Top Grid */}
       <div className="footer-grid">
         <div className="footer-col">

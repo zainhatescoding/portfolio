@@ -860,6 +860,27 @@ h6 {
     transform: translate(50%, 50%);
 }
 
+/* Company Logo in Experience Block */
+.exp-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.6rem;
+}
+
+.exp-logo {
+    height: 40px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 0.4s ease;
+}
+
+.exp-block:hover .exp-logo {
+    opacity: 0.3;
+}
+
 .company-name {
     font-size: 1.6rem;
     margin-bottom: 0;
