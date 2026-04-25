@@ -1,12 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Navbar from '@/components/Navbar';
+import Logo from '@/components/Logo';
 import Footer from '@/components/Footer';
 import DetailsModal from '@/components/DetailsModal';
 import SectionHeader from '@/components/SectionHeader';
-import Logo from '@/components/Logo';
-import Link from 'next/link';
 import { useTransition } from '@/components/TransitionProvider';
 
 const accolades = [
@@ -46,28 +44,39 @@ export default function Discover() {
 
   return (
     <main className="container">
-      <nav className="hero-nav">
+      <nav className="discover-nav" style={{
+        padding: '2rem 5vw',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        zIndex: 100
+      }}>
         <div className="nav-logo">
-          <button 
-            onClick={() => transitionTo('/')} 
-            style={{ 
-              background: 'none', 
-              border: 'none', 
-              cursor: 'pointer', 
-              padding: 0,
-              color: 'var(--text-primary)',
-              display: 'flex',
-              alignItems: 'center'
-            }}
+          <button
+            onClick={() => transitionTo('/')}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: 'var(--text-primary)' }}
           >
-            <Logo style={{ width: 40, height: 40 }} />
+            <Logo style={{ width: 44, height: 44 }} />
           </button>
         </div>
         <div className="nav-right">
-          <button 
-            onClick={() => transitionTo('/')} 
-            className="nav-link discover-link"
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', fontFamily: 'inherit', padding: 0 }}
+          <button
+            onClick={() => transitionTo('/')}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              color: 'var(--text-primary)',
+              fontSize: '0.85rem',
+              fontWeight: 600,
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              fontFamily: 'var(--font-heading)'
+            }}
           >
             Home
           </button>

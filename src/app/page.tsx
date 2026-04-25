@@ -44,7 +44,6 @@ export default function Home() {
     setModalData(data);
     setModalOpen(true);
   };
-
   useEffect(() => {
     // Reveal animations
     const revealElements = document.querySelectorAll('.reveal-up, .reveal-text');
@@ -114,12 +113,21 @@ export default function Home() {
         </div>
 
         <div className="hero-content-wrapper">
-          <h1 className="hero-headline reveal-text">Muhammad Zain.</h1>
-          <h2 className="hero-sub reveal-text" style={{ transitionDelay: '0.1s' }}>
-            Design speaks,<br />so do I.
-          </h2>
-          <div className="hero-sub-bottom reveal-text" style={{ transitionDelay: '0.2s' }}>
-            2026 to the Future
+          <div className="hero-frame reveal-up">
+            <div className="cube corner top-left"></div>
+            <div className="cube corner top-right"></div>
+            <div className="cube corner bottom-left"></div>
+            <div className="cube corner bottom-right"></div>
+
+            <div className="hero-text-content">
+              <h1 className="hero-headline reveal-text">Muhammad Zain.</h1>
+              <h2 className="hero-sub reveal-text" style={{ transitionDelay: '0.1s' }}>
+                Design speaks, so do I.
+              </h2>
+              <div className="hero-sub-bottom reveal-text" style={{ transitionDelay: '0.2s' }}>
+                Few Years of Design, Experienced by me.
+              </div>
+            </div>
           </div>
         </div>
       </section>

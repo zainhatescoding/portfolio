@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Globe } from 'lucide-react';
 import Logo from './Logo';
 import { useTransition } from './TransitionProvider';
 
@@ -17,6 +17,11 @@ export default function Navbar() {
       setTime(now.toLocaleTimeString('en-GB', { hour12: false }));
     };
     const handleScroll = () => {
+      // Disable scroll effects on mobile
+      if (window.innerWidth <= 768) {
+        setIsScrolled(true);
+        return;
+      }
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -36,8 +41,7 @@ export default function Navbar() {
     <div className="nav-wrapper">
       <div className={`nav-gradient-overlay ${isScrolled ? 'opacity-0' : ''}`} />
 
-      {/* Hero Navigation - Visible at top */}
-      <nav className={`hero-nav ${isScrolled ? 'hidden' : ''}`}>
+      <nav className={`unified-nav ${isScrolled ? 'compact' : 'expanded'}`}>
         <div className="nav-logo">
           <button 
             onClick={() => transitionTo('/')} 
@@ -52,63 +56,7 @@ export default function Navbar() {
               alignItems: 'center'
             }}
           >
-            <Logo style={{ width: 44, height: 44 }} />
-          </button>
-        </div>
-
-        <div className="nav-columns">
-          <div className="nav-col">
-            <span className="nav-title">Quick Links</span>
-            <Link href="#work" className="nav-link">My Work</Link>
-            <Link href="#experience" className="nav-link">Experience</Link>
-          </div>
-          <div className="nav-col">
-            <span className="nav-title">Narrative</span>
-            <Link href="#about" className="nav-link">About Me</Link>
-            <Link href="#connect" className="nav-link">Connect</Link>
-          </div>
-          <div className="nav-col">
-            <span className="nav-title">POC</span>
-            <Link href="#testimonials" className="nav-link">Testimonials</Link>
-            <Link href="#case-studies" className="nav-link">Case Studies</Link>
-          </div>
-        </div>
-
-        <div className="nav-right">
-          <div className="nav-time">
-            <span className="time-box">{time}</span>
-            <div className="time-label">
-              <span>CET</span>
-              <span>ENS</span>
-            </div>
-          </div>
-          <button 
-            onClick={() => transitionTo('/discover')} 
-            className="nav-link discover-link"
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', fontFamily: 'inherit', padding: 0 }}
-          >
-            Discover
-          </button>
-        </div>
-      </nav>
-
-      {/* Compact Navigation - Slides down on scroll */}
-      <nav className={`compact-nav ${isScrolled ? 'visible' : ''}`}>
-        <div className="nav-logo">
-          <button 
-            onClick={() => transitionTo('/')} 
-            className="logo-link" 
-            style={{ 
-              background: 'none', 
-              border: 'none', 
-              cursor: 'pointer', 
-              padding: 0,
-              color: 'var(--text-primary)',
-              display: 'flex',
-              alignItems: 'center'
-            }}
-          >
-            <Logo style={{ width: 32, height: 32 }} />
+            <Logo style={{ width: 36, height: 36 }} />
           </button>
         </div>
 
@@ -145,12 +93,22 @@ export default function Navbar() {
         </div>
 
         <div className="nav-right">
+          <div className="nav-time-wrapper">
+            <div className="nav-time">
+              <span className="time-box">{time}</span>
+              <div className="time-label">
+                <span>CET</span>
+                <span>ENS</span>
+              </div>
+            </div>
+          </div>
           <button 
             onClick={() => transitionTo('/discover')} 
             className="nav-link discover-link"
             style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', fontFamily: 'inherit', padding: 0 }}
           >
-            Discover
+            <span className="discover-text">Discover</span>
+            <Globe size={18} className="discover-icon" />
           </button>
         </div>
       </nav>
