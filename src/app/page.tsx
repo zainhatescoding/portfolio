@@ -245,28 +245,19 @@ export default function Home() {
 
       {/* About Me */}
       <section id="about" className="about-me reveal-up">
-        <div className="about-container">
-          <div className="about-content">
-            <SectionHeader title="About Me" style={{ marginBottom: '2rem', padding: '0' }} />
-            <div className="about-narrative-box">
-              <h2 className="bio-lead">
-                I am a multidisciplinary designer and developer crafted for the future.
-              </h2>
-              <p className="bio-sub">
-                Merging brutalist precision with sophisticated motion, I craft interfaces that don&apos;t just function, they resonate. Based in the digital landscape, I work at the intersection of aesthetics and utility.
-              </p>
-            </div>
-          </div>
-
-          <div className="about-image-wrap">
-            <div className="about-frame">
-              <span className="tech-label label-tl">Asset_V1.0</span>
-              <img
-                src="/3d-logo.png"
-                alt="Muhammad Zain 3D Logo"
-                className="about-logo-3d"
-              />
-              <span className="tech-label label-br">2026_PRTFL</span>
+        <div className="about-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', margin: '0 auto', maxWidth: '800px' }}>
+          <SectionHeader title="About Me" style={{ marginBottom: '2rem', padding: '0', justifyContent: 'center' }} />
+          <div className="about-narrative-box">
+            <h2 className="bio-lead">
+              I am a multidisciplinary designer and developer crafted for the future.
+            </h2>
+            <p className="bio-sub" style={{ margin: '0 auto', maxWidth: '600px' }}>
+              Merging brutalist precision with sophisticated motion, I craft interfaces that don&apos;t just function, they resonate. Based in the digital landscape, I work at the intersection of aesthetics and utility.
+            </p>
+            <div style={{ marginTop: '2.5rem' }}>
+              <a href="mailto:mzaftw@gmail.com" className="floating-contact" style={{ position: 'relative', bottom: 'auto', left: 'auto', display: 'inline-block' }}>
+                Get in touch <span className="btn-arrow">&rarr;</span>
+              </a>
             </div>
           </div>
         </div>

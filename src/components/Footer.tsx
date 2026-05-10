@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer-col">
           <Link href="tel:+923244897599" className="footer-link">
             <div className="link-content">
-              <span className="default-text">92 324 4897599 <span className="btn-arrow">&rarr;</span></span>
+              <span className="default-text">92 324 4897599</span>
               <span className="hover-text">Call me <span className="btn-arrow">&rarr;</span></span>
               <div className="link-underline"></div>
             </div>
@@ -21,8 +21,8 @@ export default function Footer() {
         <div className="footer-col">
           <Link href="mailto:mzaftw@gmail.com" className="footer-link">
             <div className="link-content">
-              <span className="default-text">mzaftw@gmail.com <span className="btn-arrow">&rarr;</span></span>
-              <span className="hover-text">Contact via email <span className="btn-arrow">&rarr;</span></span>
+              <span className="default-text">mzaftw@gmail.com</span>
+              <span className="hover-text">Contact me<span className="btn-arrow">&rarr;</span></span>
               <div className="link-underline"></div>
             </div>
             <div className="cube corner top-left"></div>
@@ -34,8 +34,8 @@ export default function Footer() {
         <div className="footer-col">
           <Link href="#collab" className="footer-link">
             <div className="link-content">
-              <span className="default-text">Start collaboration <span className="btn-arrow">&rarr;</span></span>
-              <span className="hover-text">Lets Get to Work <span className="btn-arrow">&rarr;</span></span>
+              <span className="default-text">Start collaboration</span>
+              <span className="hover-text">Lets Work <span className="btn-arrow">&rarr;</span></span>
               <div className="link-underline"></div>
             </div>
             <div className="cube corner top-left"></div>
@@ -44,6 +44,7 @@ export default function Footer() {
             <div className="cube corner bottom-right"></div>
           </Link>
         </div>
+
         <div className="footer-col">
         </div>
       </div>
@@ -59,7 +60,8 @@ export default function Footer() {
           <p>Building for agencies<br />& brands</p>
         </div>
         <div className="f-bot-col">
-          <p>Availability from<br />May &apos;26</p>
+
+          <p>Availability from<br />June &apos;26</p>
         </div>
         <div className="f-bot-col">
           <p>Instagram<br />@archiveofzain</p>

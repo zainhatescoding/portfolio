@@ -4,8 +4,8 @@
     --text-primary: #f2f2f2;
     --text-secondary: #888888;
     --accent-color: #e0e0e0;
-    --font-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-heading: var(--font-google-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-body: var(--font-google-sans), 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 html.lenis,
